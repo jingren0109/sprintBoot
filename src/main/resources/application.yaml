@@ -1,0 +1,38 @@
+person:
+  last-name: qin
+  age: 3
+  happy: false
+  birth: 2019/11/01
+  maps: {k1: v1,k2: v2}
+  lists:
+    - code
+    - music
+    - girl
+  dog:
+    name: wang
+    age: 2
+
+
+server:
+  port: 8081
+
+spring:
+  profiles:
+    active: dev
+
+---
+
+server:
+  port: 8082
+spring:
+  config:
+    activate:
+      on-profile: dev
+---
+
+server:
+  port: 8083
+spring:
+  config:
+    activate:
+      on-profile: qa
